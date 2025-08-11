@@ -1,4 +1,3 @@
-import "./App.css";
 import { Movie } from "./data/movies"
 
 function App() {

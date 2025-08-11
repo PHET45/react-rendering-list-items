@@ -1,19 +1,37 @@
-export function Movie(){
-  return(
+export function Movie() {
+  return (
     <>
-      <div>Movie List Section</div>
-      <div className="">
-        <div><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg" /></div>
-        <div>
-          <div>Title:</div>
-          <div>Year:</div>
-          <div>Runtime:</div>
-          <div>Genres:</div>
-          <div>IMDB Ratings:</div>
-          <div>IMDB Votes:</div>
+      <div className="flex justify-center items-center py-[70px] text-[40px]">Movie List Section</div>
+      {movies.map((item, index) => (
+        <div className="flex justify-center items-center card-animetion">
+          <div key={index} className="flex flex-row w-[400px] h-[250px] p-4 mb-[80px] rounded-[10px] gap-4 custom-shadow">
+            <div className="w-[102px]">
+              <img className="w-[102px] h-[100px] rounded-[10px] shadow-xs object-cover"
+                src={item.image}
+                alt={item.title}
+              />
+            </div>
+            <div className="flex flex-col w-[250px]">
+              <div className="text-card-detail">Title: {item.title}</div>
+              <div className="text-card-detail">Year: {item.year}</div>
+              <div className="text-card-detail">Runtime: {item.runtime}</div>
+              <div className="text-card-detail">
+                <div className="flex flex-wrap">
+                  <div className="pr-[10px]">Genres: </div>
+                  {item.genres.map((genre, index) => (<div key={index}
+                    className="genres-buttom">
+                    {genre}</div>))}
+                </div>
+              </div>
+              <div className="text-card-detail">IMDB Ratings: {item.imdbRating}</div>
+              <div className="text-card-detail">IMDB Votes: {item.imdbVotes}</div>
+            </div>
+          </div>
         </div>
+      ))
 
-      </div>
+      }
+
     </>
   )
 }
@@ -180,7 +198,7 @@ const movies = [
     runtime: "N/A",
     director: "Justin Kurzel",
     image:
-      "https://images-na.ssl-images-amazon.com/images/M/MV5BN2EyYzgyOWEtNTY2NS00NjRjLWJiNDYtMWViMjg5MWZjYjgzXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_.jpg",
+      "https://m.media-amazon.com/images/M/MV5BMjc2ODAwNTUxNl5BMl5BanBnXkFtZTgwNTkzOTY4ODE@._V1_QL75_UX327_.jpg",
     genres: ["Action", "Adventure", "Fantasy"],
     imdbRating: "N/A",
     imdbVotes: "N/A",

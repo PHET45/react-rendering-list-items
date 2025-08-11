@@ -1,16 +1,50 @@
+/* v4 ใช้ import เดียว */
+@import "tailwindcss";
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+    font-family: kanit, sans-serif;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+    --bg-color-genre: #EAAC99;
+    --border-shadow-card: #917C7C40;
+}
+
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.kanit-semibold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.custom-shadow {
+    @apply shadow-[0px_4px_40px_0px_rgba(145,124,124,0.25)];
+}
+
+.text-card-detail{
+    @apply mr-1 text-lg font-[400];
+}
+
+.genres-buttom{
+    @apply py-[4px] px-[13px] mb-2 mr-[10px] text-[16px] rounded-[10px] bg-[var(--bg-color-genre)];
+}
+
+.card-animetion{
+    @apply hover:scale-110  transition delay-150 duration-300 ease-in-out cursor-pointer;
 }
