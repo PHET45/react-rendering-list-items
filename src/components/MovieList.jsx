@@ -24,11 +24,11 @@ const MovieList = () => {
                     opacity: 1
                 }}
                 />
-                <div className='flex flex-col font-kanit font-normal text-xl leading-[18px] align-middle gap-y-3 overflow-x-auto '>
+                <div className='flex flex-col font-kanit font-normal text-xl leading-[18px] align-middle gap-y-3 overflow-x-auto w-[250px]'>
                     <div>Title:{movie.title}</div>
                     <div>Year:{movie.year}</div>
                     <div>Runtime:{movie.runtime}</div>
-                    <div className='flex flex-row items-center'>
+                    <div className='flex flex-wrap items-center'>
                     Genres:
                     {movie.genres.map((genre,i) => {
                         return(
