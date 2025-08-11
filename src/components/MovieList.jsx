@@ -3,7 +3,7 @@ import  movies  from '../data/movies';
 const MovieList = () => {
   return (
     <div className='flex flex-col items-center gap-10 '>
-        <h1>Movie List Section</h1>
+        <h1 className='font-kanit font-normal text-[40px] leading-[18px] tracking-normal align-middle'>Movie List Section</h1>
         {movies.map((movie, index) => (
         <div className='bg-white shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden  px-5 py-7 ' 
             key = {movie.title}
@@ -24,7 +24,7 @@ const MovieList = () => {
                     opacity: 1
                 }}
                 />
-                <div className='flex flex-col font-kanit font-normal text-xl leading-[18px] align-middle gap-y-3 overflow-x-auto'>
+                <div className='flex flex-col font-kanit font-normal text-xl leading-[18px] align-middle gap-y-3 overflow-x-auto '>
                     <div>Title:{movie.title}</div>
                     <div>Year:{movie.year}</div>
                     <div>Runtime:{movie.runtime}</div>
