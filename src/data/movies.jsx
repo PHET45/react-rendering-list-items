@@ -1,3 +1,24 @@
+export function Movie(){
+  return(
+    <>
+      <div>Movie List Section</div>
+      <div className="">
+        <div><img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyOTYyMzUxNl5BMl5BanBnXkFtZTcwNTg0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg" /></div>
+        <div>
+          <div>Title:</div>
+          <div>Year:</div>
+          <div>Runtime:</div>
+          <div>Genres:</div>
+          <div>IMDB Ratings:</div>
+          <div>IMDB Votes:</div>
+        </div>
+
+      </div>
+    </>
+  )
+}
+
+
 const movies = [
   {
     title: "Avatar",
